@@ -21,18 +21,5 @@ firebase.auth.Auth.Persistence.LOCAL;
     if(user){
      window.location.href='main-page.html';
     }
-    else{
-         window.location.href='login-page.html';
-    }
 }); 
 
-const signout=document.getElementById('signoutbutton');
-signout.addEventListener('click',e=>{
-    e.preventDefault();
-    auth.signOut().then(()=>{
-        console.log('user sign out');
-    }).catch(err=>{
-        console.log(err.message);
-    });
-   
-})
