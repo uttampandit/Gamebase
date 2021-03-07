@@ -1,8 +1,7 @@
-#brandname{
-padding-right: 45%;
+body{
+    background-color: lightgray;
 }
-
-#brandlogo{
+#brand{
     padding-left: 45%;
 }
 
@@ -35,6 +34,11 @@ input[type='password']{
     padding-left: 10px;
     margin-left: 20px;
 }
+input[type='text']{
+    width: 90%;
+    padding-left: 10px;
+    margin-left: 20px;
+}
 .label{
     padding-left: 150px;
 }
@@ -49,4 +53,9 @@ input[type='password']{
     text-align: center;
     color: red;
     font-size: 20px;
+}
+#message{
+    text-align: center;
+    color: green;
+    font-family:Arial, Helvetica, sans-serif
 }

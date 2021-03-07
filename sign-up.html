@@ -10,7 +10,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <link rel="stylesheet" href="signin.css">
-  <title>LOGIN PAGE</title>
+  <title>SIGNUP PAGE</title>
   <link rel="icon" type='image/png' href='video-game.png'>
 </head>
 
@@ -27,19 +27,26 @@
     </div>
     </div>
   </nav>
+  
   <form class='loginform'>
     <p id="error"></p>
+    <label class='label'style='padding-left: 160px;' >Username</label>
+    <br>
+    <input type="text"  name = 'username' placeholder="Create a Username" id='username'>
+    <br>
     <label class='label'>Email Address</label>
     <br>
-    <input type="email" placeholder="Email" id='email'>
+    <input type="email" name='email' placeholder="Email" id='email'>
     <br>
-    <label class='label' style='padding-left: 160px;'>Password</label>
+    <label class='label' style='padding-left: 150px;'>Create Password</label>
     <br>
-    <input type="password" placeholder="Password" id="password"><br>
-    <button type="button" class="btn btn-outline-success button" id="signinbutton">Sign In</button>
+    <input type="password" placeholder="Create Password" id="password"><br>
+    <button type="button" class="btn btn-outline-success button" id="signUp">Sign Up</button>
     <br>
-    <a href='sign-up.html' id='signup'>Don't have an Account? Create now!</a>
+
   </form>
+  <h2 id='message'></h2>
+  
 
 
 
@@ -51,6 +58,7 @@
 
   <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
   <script>
     // Your web app's Firebase configuration
     var firebaseConfig = {
@@ -64,8 +72,10 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     const auth=firebase.auth();
+    const database=firebase.firestore();
+    database.settings({timestampsInSnapshots : true })
   </script>
-  <script src="loginjs.js"></script>
+  <script src="signupjs.js"></script>
 </body>
 
 </html>

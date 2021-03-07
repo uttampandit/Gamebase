@@ -9,7 +9,7 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-  <link rel="stylesheet" href="main-page.css">
+  <link rel="stylesheet" href="home-page.css">
   <title>GamersArena</title>
   <link rel='icon' type='image/png' href='video-game.png'>
 
@@ -29,8 +29,12 @@
         <a class='nav-link active' href='#' id="home">Home</a>
       </li>
       <li class='nav-item'>
-        <a class='nav-link' href="#" id='upload'>Upload</a>
+        <a class='nav-link'  href="login-page.html">Sign In</a>
       </li>
+      <li class='nav-item'>
+        <a class='nav-link'  href='sign-up.html' >Sign Up</a>
+      </li>
+      
       <li class='nav-item'>
         <div>
 
@@ -42,9 +46,7 @@
           Search
         </button>
       </li>
-      <div id="signout">
-        <a class='nav-link' id='signoutbutton'>Sign Out</a>
-      </div>
+      
 
     </ul>
 
@@ -69,31 +71,31 @@
       <div class='carousel-inner'>
         <div class='carousel-item active'
           style='background-image: url(./gamelogo/best/8BallBilliardsClassicTeaser.jpg);'>
-          <button type="button" class="btn btn-success btn-lg playbutton">PLAY NOW</button>
+          <button type="button" class="btn btn-success btn-lg playbutton" onclick="redirect()">PLAY NOW</button>
         </div>
         <div class='carousel-item' style="background-image: url(./gamelogo/best/BubbleWoodsTeaser.jpg);">
-          <button type="button" class="btn btn-success btn-lg playbutton">PLAY NOW</button>
+          <button type="button" class="btn btn-success btn-lg playbutton" onclick="redirect()">PLAY NOW</button>
         </div>
         <div class='carousel-item' style='background-image: url(./gamelogo/best/ColorPixelArtClassicTeaser.jpg);'>
-          <button type="button" class="btn btn-success btn-lg playbutton">PLAY NOW</button>
+          <button type="button" class="btn btn-success btn-lg playbutton" onclick="redirect()">PLAY NOW</button>
         </div>
         <div class='carousel-item' style="background-image: url(./gamelogo/best/ElementBlocksTeaser.jpg);">
-          <button type="button" class="btn btn-success btn-lg playbutton">PLAY NOW</button>
+          <button type="button" class="btn btn-success btn-lg playbutton" onclick="redirect()">PLAY NOW</button>
         </div>
         <div class='carousel-item' style="background-image: url(./gamelogo/best/GinRummyPlusTeaser.jpg);">
-          <button type="button" class="btn btn-success btn-lg playbutton">PLAY NOW</button>
+          <button type="button" class="btn btn-success btn-lg playbutton" onclick="redirect()">PLAY NOW</button>
         </div>
         <div class='carousel-item' style="background-image: url(./gamelogo/best/MotoX3mPoolPartyTeaser.jpg);">
-          <button type="button" class="btn btn-success btn-lg playbutton">PLAY NOW</button>
+          <button type="button" class="btn btn-success btn-lg playbutton" onclick="redirect()">PLAY NOW</button>
         </div>
         <div class='carousel-item' style="background-image: url(./gamelogo/best/PerfectPiano_Teaser.jpg);">
-          <button type="button" class="btn btn-success btn-lg playbutton">PLAY NOW</button>
+          <button type="button" class="btn btn-success btn-lg playbutton" onclick="redirect()">PLAY NOW</button>
         </div>
         <div class='carousel-item' style="background-image: url(./gamelogo/best/PirateCardsTeaser.jpg);">
-          <button type="button" class="btn btn-success btn-lg playbutton">PLAY NOW</button>
+          <button type="button" class="btn btn-success btn-lg playbutton" onclick="redirect()">PLAY NOW</button>
         </div>
         <div class='carousel-item' style="background-image: url(./gamelogo/best/ZooBoomTeaser.jpg);">
-          <button type="button" class="btn btn-success btn-lg playbutton">PLAY NOW</button>
+          <button type="button" class="btn btn-success btn-lg playbutton" onclick="redirect()">PLAY NOW</button>
         </div>
 
 
@@ -118,15 +120,15 @@
         <div class='row category-element' style="background-color: cadetblue; border-bottom: 0px;">
           <h3 style="color: white;">CATEGORIES</h3>
         </div>
-        <div class='row category-element'> <a class='category-link' href='arcade.html'>Arcade</a></div>
-        <div class='row category-element'><a class='category-link' href='bubble-shooter.html'>Bubble Shooter</a></div>
-        <div class='row category-element'><a class='category-link' href='best.html'>Best</a></div>
-        <div class='row category-element'><a class='category-link' href='cards.html'>Cards</a></div>
-        <div class='row category-element'><a class='category-link' href='jump-and-run.html'>Jump And Run</a></div>
-        <div class='row category-element'><a class='category-link' href='puzzle.html'>Puzzle</a></div>
-        <div class='row category-element'><a class='category-link' href='quiz.html'>Quiz</a></div>
-        <div class='row category-element'><a class='category-link' href='racing.html'>Racing</a></div>
-        <div class='row category-element' style="border-bottom: 0px;"><a class='category-link' href='sports.html'>Sports</a>
+        <div class='row category-element'> <a class='category-link' href='login-page.html'>Arcade</a></div>
+        <div class='row category-element'><a class='category-link' href='login-page.html'>Bubble Shooter</a></div>
+        <div class='row category-element'><a class='category-link' href='login-page.html'>Best</a></div>
+        <div class='row category-element'><a class='category-link' href='login-page.html'>Cards</a></div>
+        <div class='row category-element'><a class='category-link' href='login-page.html'>Jump And Run</a></div>
+        <div class='row category-element'><a class='category-link' href="login-page.html">Puzzle</a></div>
+        <div class='row category-element'><a class='category-link' href='login-page.html'>Quiz</a></div>
+        <div class='row category-element'><a class='category-link' href='login-page.html'>Racing</a></div>
+        <div class='row category-element' style="border-bottom: 0px;"><a class='category-link' href='login-page.html'>Sports</a>
         </div>
       </div>
       <div class='col-sm-10 new'>
@@ -134,53 +136,53 @@
 
         <div class='row game'>
           <div class='col-sm-4 game'>
-           <a href="#" class='game-text'> <img src="gamelogo/new/BrainTrainerTeaser.jpg" alt="">
+           <a onclick="redirect()" class='game-text'> <img src="gamelogo/new/BrainTrainerTeaser.jpg" alt="">
             <h3 >Brain Trainer</h3>
            </a>
           
           </div>
           <div class='col-sm-4 game'>
-           <a href="#" class='game-text'> <img src="gamelogo/new/BusParking3dTeaser.jpg" alt="">
+           <a onclick="redirect()" class='game-text'> <img src="gamelogo/new/BusParking3dTeaser.jpg" alt="">
             <h3 >Bus Parking 3d</h3>
             </a>
           </div>
           <div class='col-sm-4 game'>
-           <a href="#" class='game-text'> <img src="gamelogo/new/CrazyCavesTeaser.jpg" alt="">
+           <a onclick="redirect()" class='game-text'> <img src="gamelogo/new/CrazyCavesTeaser.jpg" alt="">
             <h3 >Crazy Caves</h3>
             </a>
           </div>
         </div>
         <div class='row game'>
           <div class='col-sm-4 game'>
-           <a href="#" class='game-text'> <img src="gamelogo/new/FuzziesTeaser.jpg" alt=''>
+           <a onclick="redirect()" class='game-text'> <img src="gamelogo/new/FuzziesTeaser.jpg" alt=''>
             <h3 >Fuzzies</h3>
             </a>        
           </div>
           <div class='col-sm-4 game'>
-           <a href="#" class='game-text'> <img src="gamelogo/new/GardenBloomTeaser.jpg" alt="">
+           <a onclick="redirect()" class='game-text'> <img src="gamelogo/new/GardenBloomTeaser.jpg" alt="">
             <h3>Garden Bloom</h3>
             </a>
           </div>
           <div class='col-sm-4 game'>
-           <a href="#" class='game-text'> <img src="gamelogo/new/GardenMatch3dTeaser.jpg" alt="">
+           <a onclick="redirect()" class='game-text'> <img src="gamelogo/new/GardenMatch3dTeaser.jpg" alt="">
             <h3 >Garden Match 3d</h3>
             </a>
           </div>
         </div>
         <div class='row game'>
           <div class='col-sm-4 game'>
-           <a href="#" class='game-text'> <img src="gamelogo/new/MahjongWorldTeaser.jpg" alt="">
+           <a onclick="redirect()" class='game-text'> <img src="gamelogo/new/MahjongWorldTeaser.jpg" alt="">
             <h3 >Mahjong World</h3>
             </a>
           
           </div>
           <div class='col-sm-4 game'>
-           <a href="#" class='game-text'> <img src="gamelogo/new/PullPinsTeaser.jpg" alt="">
+           <a onclick="redirect()" class='game-text'> <img src="gamelogo/new/PullPinsTeaser.jpg" alt="">
             <h3 >Pull Pins</h3>
            </a>
           </div>
           <div class='col-sm-4 game'>
-           <a href="#" class='game-text' > <img src="gamelogo/new/TntBombTeaser.jpg" alt=''>
+           <a onclick="redirect()" class='game-text' > <img src="gamelogo/new/TntBombTeaser.jpg" alt=''>
           <h3 >Tnt Bomb</h3> </a>       </div>
         </div>
     </div>
@@ -214,7 +216,17 @@
     const database = firebase.firestore();
     database.settings({ timestampsInSnapshots: true });
   </script>
-  <script src="main-pagejs.js"></script>
+  
+  <script>
+  
+  function redirect(){
+    window.location.href="login-page.html";
+  }
+   // var play = document.querySelector('.btn-lg');
+  ////  play.forEach().addEventListener('click', ()=>{
+    //  window.location.href="login-page.html";
+   // });
+  </script>
 </body>
 
 </html>
