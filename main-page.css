@@ -1,24 +1,15 @@
 body{
     background-color:lightgray;
 }
-#search{
- margin-left: 940px;
- 
-}
+
 #signout{
-margin-left: 5px;
+margin-left: 900px;
 
 }
-#searchbar{
-    position: absolute;
-    left: 250px;
-    margin-top: 5px;
-    border-radius: 30px;
-    outline: none;
-    padding-left: 20px;
-
-
+#signoutdiv{
+    margin-left: 800px;
 }
+
 
 .carousel-item{
     background-size: cover;
@@ -79,4 +70,12 @@ margin-left: 5px;
 }
 #upload-game{
     display:none;
+}
+#searchbar{
+    width: 100%;
+    outline: none;
+    padding-left: 20px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: grey;
 }

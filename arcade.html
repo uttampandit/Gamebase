@@ -54,11 +54,14 @@
         </ul>
       </div>
       <li class='nav-item'>
+        <a class='nav-link' href="search.html" id='search'>Search Games</a>
+      </li>
+      <li class='nav-item'>
         <a class='nav-link' href="#" id='upload-game'>Upload</a>
       </li>
       
-      <div id="signout">
-        <a class='nav-link' id='signoutbutton' style="padding-left: 920px;">Sign Out</a>
+      <div id="signoutdiv">
+        <a class='nav-link' id='signoutbutton'>Sign Out</a>
       </div>
 
     </ul>
@@ -170,7 +173,7 @@
             snapshot.docs.forEach((doc)=>{
                 if(doc.data().admin==true){
                     upload.style.display='block';
-                  signout.style.paddingLeft='860px';
+                    signout.style.marginLeft='-80px';
                     
                 }
             })

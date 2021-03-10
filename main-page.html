@@ -31,17 +31,11 @@
       <li class='nav-item'>
         <a class='nav-link' href="#" id='upload'>Upload</a>
       </li>
-      <li class='nav-item'>
-        <div>
 
-          <input type="search" placeholder="Search Game..." id="searchbar">
-        </div>
+      <li class='nav-item'>
+        <a class='nav-link' href="search.html" id='search'>Search Games</a>
       </li>
-      <li>
-        <button class='btn btn-outline-success' id='search'>
-          Search
-        </button>
-      </li>
+      
       <div id="signout">
         <a class='nav-link' id='signoutbutton'>Sign Out</a>
       </div>
@@ -214,6 +208,7 @@
     const database = firebase.firestore();
     database.settings({ timestampsInSnapshots: true });
   </script>
+  
   <script src="main-pagejs.js"></script>
 </body>
 
