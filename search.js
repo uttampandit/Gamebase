@@ -33,26 +33,42 @@ row = document.getElementsByClassName('col-sm-4');
 
     function searchfun(){
         filter = document.getElementById('searchbar').value.toUpperCase();
+        var j= 0;
         if(filter!=''){
         for( var i=0;i<row.length;i++){
-             gamename= row[i].getElementsByTagName('h3')[0].innerText.toUpperCase();
-
+        var  gamename= row[i].getElementsByTagName('h3')[0].innerText.toUpperCase();
+    
             if(gamename){
             if(gamename.indexOf(filter) != -1 ){
                 row[i].style.display='block';
+                error.style.display='none';
+                console.log(gamename.indexOf(filter));
+                j++;
             }
             else{
                 error = document.getElementById('error');
-                error.style.display='block';
                 row[i].style.display='none';
+                console.log('error');
+            }
             }
         }
-        }}
+    }
         else{
             for(var i=0;i<row.length;i++){
                 row[i].style.display='none';
                 error.style.display='none';
             }
         }
+        if(j==0){
+            error.style.display='block';
+        }
     }
+
+
+
+
+
+
+
+        
     

@@ -8,7 +8,9 @@ button.addEventListener('click', (e)=> {
     e.preventDefault();
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-   
+
+    
+
     auth.createUserWithEmailAndPassword(email,password).then(cred => {
        
         document.getElementById('error').innerHTML='';
@@ -19,6 +21,7 @@ button.addEventListener('click', (e)=> {
     
    
 })
+
 auth.onAuthStateChanged(user=> {
     if(user){
         database.collection('users').add({
@@ -27,7 +30,7 @@ auth.onAuthStateChanged(user=> {
             admin : false
         });
          
-        message.innerHTML="Account created!<a href='main-page.html'>click here to redirect to main page</a>"
+        message.innerHTML="Account created! <a href='main-page.html'>click here to redirect to main page</a>"
      
     }
 }); 
