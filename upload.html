@@ -10,14 +10,14 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <link rel="stylesheet" href="main-page.css">
-  <title>Best</title>
+  <title>Upload</title>
   <link rel='icon' type='image/png' href='video-game.png'>
 
 </head>
 
 <body>
 
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
     <a class="navbar-brand" href="main-page.html">
       <img src="video-game.png" alt="" class="d-inline-block align-top">
@@ -56,7 +56,7 @@
         <a class='nav-link' href="search.html" id='search'>Search Games</a>
       </li>
       <li class='nav-item'>
-        <a class='nav-link' href="/upload.html" id='upload-game'>Upload</a>
+        <a class='nav-link active' href="upload.html" id='upload-game'>Upload</a>
       </li>
       
       <div id="signoutdiv">
@@ -66,65 +66,37 @@
     </ul>
 
   </nav>
-  </div>
-  <br>
-  <h1 class="gameheading">BEST GAMES</h1>
-  <br>
-  <div class='container'>
-    <div class='row game'>
-      <div class='col-sm-4'>
-       <a href="individual-website/best/8ballbillardsclassic.html" class='game-text'> <img src="gamelogo/best/8BallBilliardsClassicTeaser.jpg" alt="">
-        <h3 >8 Ball Billiards Classic</h3>
-       </a>
-      </div>
-      <div class='col-sm-4'>
-       <a href="individual-website/best/bubblewoods.html" class='game-text'> <img src="gamelogo/best/BubbleWoodsTeaser.jpg" alt="">
-        <h3 >Bubble Woods</h3>
-        </a>
-      </div>
-      <div class='col-sm-4'>
-       <a href="individual-website/best/colorpixelartclassic.html" class='game-text'> <img src="gamelogo/best/ColorPixelArtClassicTeaser.jpg" alt="">
-        <h3 >ColorPixel Art Classic</h3>
-        </a>
-      </div>
-    </div>
-    <div class='row game'>
-      <div class='col-sm-4'>
-       <a href="individual-website/best/elementblocks.html" class='game-text'> <img src="gamelogo/best/ElementBlocksTeaser.jpg" alt=''>
-        <h3 >Element Blocks</h3>
-        </a>        
-      </div>
-      <div class='col-sm-4'>
-       <a href="individual-website/best/ginrummyplus.html" class='game-text'> <img src="gamelogo/best/GinRummyPlusTeaser.jpg" alt="">
-        <h3>GinRummy Plus</h3>
-        </a>
-      </div>
-      <div class='col-sm-4 game'>
-       <a href="individual-website/best/motox3poolparty.html" class='game-text'> <img src="gamelogo/best/MotoX3mPoolPartyTeaser.jpg" alt="">
-        <h3 >MotoX Pool Party</h3>
-        </a>
-      </div>
-    </div>
-    <div class='row game'>
-      <div class='col-sm-4'>
-       <a href="individual-website/best/perfectpiano.html" class='game-text'> <img src="gamelogo/best/PerfectPiano_Teaser.jpg" alt="">
-        <h3 >Perfect Piano</h3>
-        </a>
-      
-      </div>
-      <div class='col-sm-4'>
-       <a href="individual-website/best/piratecards.html" class='game-text'> <img src="gamelogo/best/PirateCardsTeaser.jpg" alt="">
-        <h3 >Pirate Cards</h3>
-       </a>
-      </div>
-      <div class='col-sm-4'>
-       <a href="individual-website/best/zooboom.html" class='game-text' > <img src="gamelogo/best/ZooBoomTeaser.jpg" alt=''>
-      <h3>ZooBoom</h3> </a>       </div>
-    </div>
+ 
+   <h1 id='upload-heading'>Upload your games by filling this form</h1>
 
-  </div>
+   <br>
+<div class="container">
+   <form id='form'>
+       <label class='label'>Game Name :</label>
+       <input type="text" placeholder="Enter the game name" class="input" id="gamename" required>
+       <br>
+       <label class="label">Select the Category :</label>
+       <select name='category' id="category-select" onchange="selection()">
+        <option value="arcade">Arcade</option>
+        <option value="best">Best</option>
+        <option value="bubble shooter">Bubble Shooter</option>
+        <option value="cards">Cards</option>
+        <option value="jump and run">Jump And Run</option>
+        <option value="New">New</option>
+        <option value="puzzle">Puzzle</option>
+        <option value="quiz">Quiz</option>
+        <option value="racing">Racing</option>
+        <option value="sports">Sports</option>
+       </select>
+       <label class="label" >Game Logo URL :</label>
+       <input type="text" class="url" placeholder="Enter the Game Logo URL" id="gamelogo" required>
+       <label class="label">Game Iframe URL :</label>
+       <input type="text" class="urls" placeholder="Enter the Game Iframe Url" id="iframes" required>
+       <button class="btn btn-lg btn-success btn-block" >Upload</button>
+   </form>
 
-  
+</div>
+<h2 id='uploadnumber'></h2>
 
 
 
@@ -153,33 +125,8 @@
     const database = firebase.firestore();
     database.settings({ timestampsInSnapshots: true });
   </script>
-  <script>
-     upload=document.getElementById("upload-game");
- signout=document.getElementById('signoutbutton');
-
-    signout.addEventListener("click",e=>{
-    auth.signOut();
-})
-    auth.onAuthStateChanged(user=> {
-    if(!user){
-     window.location.href='home-page.html';
-    
-    }else{
-        
-
-        database.collection('users').where('email','==', user.email).get().then((snapshot =>{
-            snapshot.docs.forEach((doc)=>{
-                if(doc.data().admin==true){
-                    upload.style.display='block';
-                    signout.style.marginLeft='-80px';
-                    
-                }
-            })
-        }))
-    }
-}); 
-  </script>
  
+ <script src="upload.js"></script>
 </body>
 
 </html>

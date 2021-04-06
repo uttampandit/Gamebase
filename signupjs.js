@@ -5,6 +5,7 @@ const message= document.querySelector("#message");
 
 
 button.addEventListener('click', (e)=> {
+    if(form.username.value != ''){
     e.preventDefault();
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
@@ -19,7 +20,11 @@ button.addEventListener('click', (e)=> {
         document.getElementById('error').innerHTML=err.message;
     })
     
-   
+}
+else{
+    document.getElementById('error').innerHTML='Username Required';
+    
+}
 })
 
 auth.onAuthStateChanged(user=> {

@@ -1,5 +1,5 @@
 body{
-    background-color:lightgray;
+    background-color:#d3d3d3;
 }
 
 #signout{
@@ -72,7 +72,7 @@ margin-left: 900px;
     display:none;
 }
 #searchbar{
-    width: 100%;
+    width: 80%;
     outline: none;
     padding-left: 20px;
     border-radius: 10px;
@@ -84,8 +84,68 @@ margin-left: 900px;
     font-weight: 100;
     color: black;
     text-shadow: 4px 4px 20px red;
+    margin-top: 50px;
 }
 #iframe{
     width: 100%;
     height: 470px;
+}
+
+.gamecategory{
+    display: none;
+}
+#upload-heading{
+    font-weight: 700;
+    text-align: center;
+    margin-top: 35px;
+    color: black;
+}
+.input{
+    width: 70%;
+    margin-left: 20px;
+    height: 30px;
+    font-size: 20px;
+}
+.label{
+    font-size: 28px;
+    margin-left: 100px;
+}
+#category-select{
+    width: 62%;
+    height: 30px;
+    margin-left: 20px;
+    text-align: center;
+}
+.url{
+    width: 66%;
+    margin-left : 17px;
+    height: 30px;
+    font-size: 20px;
+}
+.urls{
+    width: 64%;
+    margin-left : 20px;
+    height: 30px;
+    font-size: 20px;
+}
+.btn-block{
+    width:70%;
+    margin-left: 200px;
+    margin-top: 20px;
+
+}
+.gameheading{
+    color:black; text-align: center; background-color: white;
+    margin-top: 58px;
+}
+.gametitle{
+    color:white;
+    text-align: center;
+    background-color: black;
+    margin-top: 58px;
+}
+#uploadnumber{
+    text-align: center;
+    font-size: 45px;
+    margin-top: 20px;
 }
